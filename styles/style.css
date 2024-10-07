@@ -1,0 +1,576 @@
+@charset "UTF-8";
+/*font*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+@font-face {
+  font-family: "ChenYuluoyan-Thin";
+  src: local("ChenYuluoyan-Thin") ， url(../font/ChenYuluoyan-Thin.woff2) format("woff2"), url(../font/ChenYuluoyan-Thin.woff) format("woff"), url(../font/ChenYuluoyan-Thin.ttf) format("turetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft JhengHei";
+  font-size: 16px;
+  line-height: 28px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*body*/
+body {
+  position: relative;
+}
+body img {
+  max-width: 100%;
+}
+body header {
+  background-color: black;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  z-index: 1000;
+}
+body div.logo {
+  display: flex;
+  align-items: center;
+}
+body div.logo a {
+  width: 132px;
+}
+body div.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+body .nav {
+  display: flex;
+}
+body .nav ul {
+  list-style: none;
+  display: flex;
+}
+body .nav ul li {
+  margin-left: 20px;
+}
+body .nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+}
+body main {
+  overflow-x: hidden;
+  background: url(../images/bg-01.png);
+  background-size: cover;
+  background-attachment: fixed;
+}
+body main div.container {
+  max-width: 1300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+body main section.banner {
+  min-height: 100vh;
+  background-image: url(../images/banner1.png);
+  background-size: cover;
+  background-position: center;
+  transition: all 0.75s ease;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 0;
+}
+body main section.banner div.filter {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  min-height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+body main section.banner div.slogan h2 {
+  font-family: "Playfair", sans-serif;
+  color: white;
+  font-size: 55px;
+  line-height: 65px;
+  padding-bottom: 1rem;
+}
+body main section.banner div.slogan p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 100;
+  color: white;
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+body main section.intro {
+  background-color: white;
+  padding: 5rem 0;
+  position: relative;
+}
+body main section.intro div.pic-p {
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+}
+body main section.intro div.intro-t {
+  margin-left: 36%;
+}
+body main section.intro div.intro-t h2 {
+  font-family: "Playfair", serif;
+  font-size: 55px;
+  line-height: 60px;
+  font-weight: 500;
+}
+body main section.intro div.intro-t h3 {
+  font-family: "ChenYuluoyan-Thin";
+  font-size: 45px;
+  padding: 1rem 0 3rem 0;
+}
+body main section.intro div.intro-t img {
+  padding: 1rem 0 2rem 0;
+}
+body main section.intro div.intro-t div.btn-box {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+}
+body main section.intro div.intro-t div.btn-box a {
+  width: 120px;
+  background: white;
+  border: 1px solid #d1d1d1;
+  color: gray;
+  padding: 0.2rem 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: 0.2s ease-in-out;
+  font-size: 13px;
+}
+body main section.intro div.intro-t div.btn-box a:first-child {
+  margin-right: 30px;
+}
+body main section.intro div.intro-t div.btn-box a:hover {
+  color: white;
+  background: black;
+  border: 1px solid black;
+}
+body main section.info-brand {
+  background-image: url(../images/bg-00.png);
+  padding: 5rem 0;
+}
+body main section.info-brand h2 {
+  color: white;
+  font-family: "Noto Sans TC", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  margin: auto;
+}
+body main section.info-brand ul {
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+body main section.info-brand ul li {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all 0.2s;
+}
+body main section.info-brand ul li:nth-child(2) {
+  margin-top: 20px;
+}
+body main section.info-brand ul li div.b-pic {
+  position: relative;
+}
+body main section.info-brand ul li div.b-pic a dl {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  opacity: 0;
+}
+body main section.info-brand ul li div.b-pic a dl p {
+  color: white;
+  text-decoration: none;
+  padding-top: 1.5rem;
+}
+body main section.info-brand ul li div.b-pic a:hover dl {
+  opacity: 1;
+}
+body main section.info-brand ul li div.b-text {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -9px;
+  z-index: 1;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  text-align: center;
+}
+body main section.info-brand ul li div.b-text h3 {
+  font-family: "Playfair", serif;
+  font-size: 30px;
+  line-height: 32px;
+  padding: 1.5rem 0;
+}
+body main section.item {
+  background-color: rgba(0, 0, 0, 0);
+  background-size: cover;
+  background-position: center;
+  padding: 5rem 0;
+}
+body main section.item h2 {
+  color: black;
+  font-family: "Noto Sans TC", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  padding-bottom: 3rem;
+  margin: auto;
+}
+body main section.item .carousel {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  background-color: white;
+  border-radius: 20px;
+  padding: 3rem 0;
+  box-shadow: 0 0 10px #ccc;
+}
+body main section.item .carousel-items {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+body main section.item .carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+body main section.item .carousel-item img {
+  max-width: 100%;
+  height: auto;
+  padding-right: 5%;
+  border-right: 1px solid #eee;
+}
+body main section.item .carousel-item div.item-box {
+  text-align: left;
+  padding-left: 5%;
+}
+body main section.item .carousel-item div.item-box h3 {
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: black;
+  color: white;
+  font-family: "Playfair", serif;
+  font-size: 22px;
+  padding: 0 0.5rem;
+}
+body main section.item .carousel-item div.item-box h4 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
+  padding: 0.8rem 0 2rem 0;
+}
+body main section.item .carousel-item div.item-box h5 {
+  color: #929292;
+  padding-bottom: 2rem;
+}
+body main section.item button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+body main section.item .prev {
+  left: 25px;
+}
+body main section.item .next {
+  right: 25px;
+}
+body main section.store {
+  background-color: white;
+  padding: 5rem 0;
+}
+body main section.store h2 {
+  font-family: "Playfair", serif;
+  font-size: 55px;
+}
+body main section.store h3 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  padding: 2rem 0;
+}
+body main section.store ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 70%;
+}
+body main section.store ul iframe {
+  filter: grayscale(1);
+  margin-bottom: 10px;
+}
+body main section.store ul iframe:hover {
+  filter: grayscale(0);
+}
+body main section.store ul li {
+  list-style: none;
+  width: 48%;
+}
+body main section.store ul li h4 {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 500;
+}
+body main section.store ul li p {
+  font-size: 15px;
+}
+body footer {
+  display: flex;
+  padding-top: 2rem;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+body footer section.links {
+  max-width: 1300px;
+  margin: auto;
+}
+body footer section.links div.f-menu ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body footer section.links div.f-menu ul:nth-child(1) {
+  padding: 1rem 0;
+}
+body footer section.links div.f-menu ul li {
+  list-style: none;
+}
+body footer section.links div.f-menu ul a {
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+}
+body footer p {
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  line-height: 40px;
+  font-size: 12px;
+  margin-top: 20px;
+  color: rgba(255, 255, 255, 0.5);
+}
+body .toTop-arrow {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  border-radius: 50%;
+  background: #8c8c8c;
+  cursor: pointer;
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+}
+body .toTop-arrow::before {
+  transform: rotate(-45deg) translate(0, -50%);
+  top: 1.2rem;
+  left: 0.5rem;
+  width: 16px;
+  height: 3px;
+  border-radius: 3px;
+  background: white;
+  position: absolute;
+  content: "";
+}
+body .toTop-arrow::after {
+  transform: rotate(45deg) translate(0, -50%);
+  top: 1.2rem;
+  right: 0.5rem;
+  width: 16px;
+  height: 3px;
+  border-radius: 3px;
+  background: white;
+  position: absolute;
+  content: "";
+}
+body .toTop-arrow:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 1200px) {
+  body main div.container {
+    padding: 0 2.5rem;
+  }
+  body main div.pic-p {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  body main div.container {
+    padding: 0 5rem;
+    flex-direction: column;
+  }
+  body main section.info-brand ul li div.b-text p br {
+    display: none;
+  }
+  body main section.item div.carousel-item {
+    flex-direction: column;
+  }
+  body main section.item div.carousel-item img {
+    padding-right: 0;
+    border-right: 0;
+  }
+  body main section.item div.carousel-item div.item-box {
+    padding: 2rem 5rem 0 5rem;
+  }
+  body main section.store div.s-title {
+    text-align: center;
+  }
+  body main section.store ul {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 900px) {
+  body main section.info-brand ul {
+    justify-content: center;
+  }
+  body main section.info-brand ul li {
+    width: 45%;
+    margin: 0 auto 2rem auto;
+  }
+  body main section.info-brand ul li:nth-child(2) {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  body div.menu-toggle {
+    display: block;
+  }
+  body .nav {
+    display: none;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 75px;
+    left: 0;
+  }
+  body .nav.active {
+    display: block;
+  }
+  body .nav ul {
+    flex-direction: column;
+  }
+  body .nav ul li {
+    margin-left: 0;
+    padding: 0.5rem 1rem;
+    border-bottom: 1px solid #eee;
+  }
+  body .nav ul li:last-child {
+    border-bottom: none;
+  }
+  body .nav ul li a {
+    color: #666;
+  }
+  body main section.intro div.pic-p {
+    width: 100%;
+  }
+  body main section.intro div.intro-t {
+    margin-left: 0;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0 2rem 2rem 2rem;
+    text-align: center;
+  }
+  body main section.intro div.btn-box {
+    justify-content: center;
+  }
+  body main section.info-brand ul li {
+    width: 72%;
+  }
+  body main section.item div.carousel-item div.item-box p br {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  body main div.container {
+    padding: 0 2rem;
+  }
+  body main section.intro div.intro-t h3 {
+    font-size: 35px;
+  }
+  body main section.intro div.intro-t div.btn-box a {
+    background-color: Black;
+    color: white;
+    border: 1px solid black;
+  }
+  body main section.info-brand ul li {
+    width: 100%;
+  }
+  body main section.item div.carousel-item img {
+    width: 75%;
+  }
+  body main section.item div.carousel-item div.item-box {
+    padding: 2rem 3.5rem 0 3.5rem;
+  }
+  body main section.store ul li {
+    width: 100%;
+  }
+  body main section.store ul li:first-child {
+    margin-bottom: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
